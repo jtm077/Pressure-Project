@@ -9,6 +9,7 @@ Once you have this downloaded, we will prepare the conda environment.
 
 > **SIDE BAR:** 
 
+
 > _What the hell is a conda environment?_ A conda environment is an isolated directory that stores a specific set of software packages and their dependencies. It allows you to manage different project requirements in their specific folders. Now, this is very useful to us. Because maybe in the future, we will do even more analyses that maybe all require different versions of certain packages. Do you want to be updating our package versions every time we want to do something different? I don't!
 
 
