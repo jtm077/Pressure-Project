@@ -37,7 +37,7 @@ This shows an overview of the range of quality values across all bases at each p
 
 It is normal for platforms to degrade as the run progresses (remember my poor reading ability mentioned earlier), so it is very common to see your base calls falling at the end of a read. A warning will be issues if the lower quartile for any base is less than 10, or if the median for any base is less than 25. It will also raise a failure if the lower quartile for any base is less than 5 or if the median of any base is less than 20.
 
-(insert picture)
+![base_seq_qual](https://github.com/jtm077/Pressure-Project/blob/main/Photos/FastQC/per_base_seq_qual.png?raw=true)
 As you can see, all of our mean quality scores (represented by the blue line), are very good in quality! Woop woop!
 
 ### Per sequence content
