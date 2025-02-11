@@ -3,7 +3,7 @@ Good morning, class. Today, we will be learning and practicing the use of FastQC
 > FastQC is a  tool that assesses the quality of raw sequencing data from high throghput sequencing. It checks for problems, provides an overview on basic quality control metrics, generates a report with graphical or list data, and flags issues.
 
 Okay, if you're joining us only now. Please go to part I to ensure you have all the necessary packages to perform the rest of this tutorial part. If you have already gone through that part, you should have all the necessary parts! We can run our quality analysis on all of our .fast.gz files using the following script:
-*[fastqc.sh]()
+* [fastqc.sh]()
 
 So this is another thing that may take a bit because it will be quality checking all four of the paired reads. Here is another [video](https://www.youtube.com/watch?v=zKKKJQ51aoE).
 
@@ -15,25 +15,26 @@ In your output directory, you will see that a report was generated for each read
 ### Basic Statistics
 (insert picture)
 This section just has some simple composition statistics. I find some of the info a little irrelevant, but that's because I'm a little stinker. They're pretty useful though.
-*Filename:pretty self-explanatory.
-*File Type:Just tells you if the file had actual base pairs, or if it had to be converted into them.
-*Encoding:Tells you what kind of code information was used for the values found inside. This was used with Illumina information/data.
-*Total Sequences:The total # of sequences in the data. In this read, we have 21211208. Wowza.
-*Total Bases: Another one that is pretty self-explanatory.
-*Sequences flagged as poor quality: Okay.
-Sequence length: I'm not even going to try.
-%GC: The percentage of Guanines (G) and Cytosines (C). 
+
+* Filename:pretty self-explanatory.
+* File Type:Just tells you if the file had actual base pairs, or if it had to be converted into them.
+* Encoding:Tells you what kind of code information was used for the values found inside. This was used with Illumina information/data.
+* Total Sequences:The total # of sequences in the data. In this read, we have 21211208. Wowza.
+* Total Bases: Another one that is pretty self-explanatory.
+* Sequences flagged as poor quality: Okay.
+* Sequence length: I'm not even going to try.
+* %GC: The percentage of Guanines (G) and Cytosines (C). 
 
 Now, here is something worth noting. The BS (lol) does not raise warnings, so you can't just look at this to make your decision to use the data or not. We have to actually look at our results. Let's move onto those.
 
 ### Per base sequence quality scores
 This shows an overview of the range of quality values across all bases at each position in the FastQC file.
-*BoxWhisker: The upper and lower whiskers represents the 10% and 90% points. (This is not on this plot, but for future reference, the yellow box in a BoxWhisker plot denotes the 25-75% range. The red line within that would represent the median.)
-*Blue line: represents the mean quality.
-*Y-axis: shows the quality scores. The higher the score, the better the base call. This axis is sub-divided by three colors:
-    *Green: Very good
-    *Yellow: Reasonable quality
-    *Red: Poor quality
+* BoxWhisker: The upper and lower whiskers represents the 10% and 90% points. (This is not on this plot, but for future reference, the yellow box in a BoxWhisker plot denotes the 25-75% range. The red line within that would represent the median.)
+* Blue line: represents the mean quality.
+* Y-axis: shows the quality scores. The higher the score, the better the base call. This axis is sub-divided by three colors:
+    * Green: Very good
+    * Yellow: Reasonable quality
+    * Red: Poor quality
 
 It is normal for platforms to degrade as the run progresses (remember my poor reading ability mentioned earlier), so it is very common to see your base calls falling at the end of a read. A warning will be issues if the lower quartile for any base is less than 10, or if the median for any base is less than 25. It will also raise a failure if the lower quartile for any base is less than 5 or if the median of any base is less than 20.
 
