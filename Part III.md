@@ -52,7 +52,7 @@ These plots show the proportion of each base in a file for which each of the fou
 (insert picture)
 Okay, that's a fail, but DO NOT WORRY! It looks like the everything is stabilized after the initial fluctuation. Now, this can be fixed by trimming (spoiler alert, that is the next step). Because it's early on and stabilizes, our DEG analysis should not be heavily impacted.
 
-### Per sequence GC content
+### Per sequence GC content 
 This measures the GC content across the whole length of each sequence in a file and compares it to a modeled normal distribution of GC content. Now, we don't know the GC content of the model, so the GC content is calculated from the observed dara and used to build a reference distribution. As per usual,an oddly shaped distribution could indicate contamination or biased subsets. A normal distribution is shifted and indicates some systemic bias which is independent of base position. If there is a systemic bias that creates a systemic bias, then it won't be flagged because the module does not know what your genome's GC content is. A warning is raised if the sum of the deviations from the normal distribution represents more than 15% of the reads. It fails if the sum of the normal distribution represents more than 15% of the reads.
 
 (insert picture)
