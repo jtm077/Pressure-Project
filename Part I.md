@@ -7,8 +7,12 @@ Once you have this downloaded, we will prepare the conda environment.
 
 ## Miniconda & Conda Environments
 
+<<<<<<< HEAD
 > **SIDE BAR:**
 > What the hell is a conda environment? A conda environment is an isolated directory that stores a specific set of software packages and their dependencies. It allows you to manage different project requirements in their specific folders. Now, this is very useful to us. Because maybe in the future, we will do even more analyses that maybe all require different versions of certain packages. Do you want to be updating our package versions every time we want to do something different? I don't!
+=======
+> **SIDE BAR:** What the hell is a conda environment? A conda environment is an isolated directory that stores a specific set of software packages and their dependencies. It allows you to manage different project requirements in their specific folders. Now, this is very useful to us. Because maybe in the future, we will do even more analyses that maybe all require different versions of certain packages. Do you want to be updating our package versions every time we want to do something different? I don't!
+>>>>>>> 8ffd68af297b8c883e9430b0232bedf3131998b8
 
 
 Now, I could provide you with the conda environment. However, if I did that, you would not learn. This is just some extra knowledge that could help you! Just be happy I am not writing this tutorial when I was obsessed with virtual machines! (that's a whole different beast of crazy I do not want to deal with)
