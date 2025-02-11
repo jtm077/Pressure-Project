@@ -1,0 +1,5 @@
+sample	treat	path
+Brain2_0.1	control	/Users/morel/OneDrive/Desktop/Pressure-Project/DEG_Analysis/quant/Brain2_0.1
+Brain2_9.0	press	/Users/morel/OneDrive/Desktop/Pressure-Project/DEG_Analysis/quant/Brain2_9.0
+Brain3_9.0	press	/Users/morel/OneDrive/Desktop/Pressure-Project/DEG_Analysis/quant/Brain3_9.0
+Brain4_9.0	press	/Users/morel/OneDrive/Desktop/Pressure-Project/DEG_Analysis/quant/Brain4_9.0

@@ -1,0 +1,14 @@
+{
+	"n_targets": 57775,
+	"n_bootstraps": 50,
+	"n_processed": 21208774,
+	"n_pseudoaligned": 14239967,
+	"n_unique": 9812751,
+	"p_pseudoaligned": 67.1,
+	"p_unique": 46.3,
+	"kallisto_version": "0.51.1",
+	"index_version": 13,
+	"k-mer length": 31,
+	"start_time": "Tue Feb 11 11:04:46 2025",
+	"call": "kallisto quant -i /mnt/c/Users/morel/OneDrive/Desktop/Pressure/Tutorial/zebrafish_transcripts.idx -o /mnt/c/Users/morel/OneDrive/Desktop/Pressure/Tutorial/quant/Brain4_9.0 -t 4 -b 50 SRR15927811_1_val_1.fq.gz SRR15927811_2_val_2.fq.gz"
+}
