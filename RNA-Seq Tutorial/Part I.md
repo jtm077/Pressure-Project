@@ -61,4 +61,4 @@ gunzip --version
 
 Yay! You made a conda environment! Pat yourself on the back. That is not sarcastic, I am genuinely proud of you :)
 
-Now that you have WSL set up, we can move on to Part II!
+Now that you have WSL set up, we can move on to [Part II](https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/Part%20II.md)!

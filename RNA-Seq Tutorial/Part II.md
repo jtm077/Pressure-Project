@@ -48,4 +48,4 @@ Now, let's make them all read-only, so we don't mess anything up.
 chmod 444 *.fast.gz
 ```
 
-Thank you for putting up with me! :) Now, it's time to start doing stuff with the data! Yay! Let's move on to Part III!
+Thank you for putting up with me! :) Now, it's time to start doing stuff with the data! Yay! Let's move on to [Part III](https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/Part%20III.md)!
