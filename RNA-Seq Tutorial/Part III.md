@@ -14,6 +14,7 @@ In your output directory, you will see that a report was generated for each read
 ## FastQC Output
 ### Basic Statistics
 ![BS](https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/Photos/FastQC/basic_stats.png)
+
 This section just has some simple composition statistics. I find some of the info a little irrelevant, but that's because I'm a little stinker. They're pretty useful though.
 
 * Filename:pretty self-explanatory.
@@ -39,42 +40,49 @@ This shows an overview of the range of quality values across all bases at each p
 It is normal for platforms to degrade as the run progresses (remember my poor reading ability mentioned earlier), so it is very common to see your base calls falling at the end of a read. A warning will be issues if the lower quartile for any base is less than 10, or if the median for any base is less than 25. It will also raise a failure if the lower quartile for any base is less than 5 or if the median of any base is less than 20.
 
 ![stats](https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/Photos/FastQC/per_base_seq_qual.png)
+
 As you can see, all of our mean quality scores (represented by the blue line), are very good in quality! Woop woop!
 
 ### Per sequence content
 This report allows you to see if a subset of your sequences have universally low quality scores. It's common to see a subset of sequences with poor quality, so do not cry if you- I mean, your sequences are not perfect. But also, this should only be a small percentage.A warning will be raised if the most frequently observed mean quality score is below 27. That mean is the same as a 0.2% error rate. A failure is raised if the most frequently observed mean quality is below 20 (1% error rate).
 
 ![base_seq_qual](https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/Photos/FastQC/per_seq_qual_scores.png)
+
 Our mean quality score is 36, which denotes very good quality!
 
 ### Per base sequence content
 These plots show the proportion of each base in a file for which each of the four normal DNA bases has been called.The relative amount of each base should reflect the overall amount of these bases in your genome. They should not be hugely imbalanced by one another. If you see strong biases which change in different bases, then this is usually an indication of an over-represented sequence.A warning will be issued uf the difference between A and T, or G and C, is greater than 10% in any position. This module will fail if the difference between nucleotides is greater than 20% in any position.
 
 ![base_seq_cont](https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/Photos/FastQC/per_base_seq_cont.png)
+
 Okay, that's a fail, but DO NOT WORRY! It looks like the everything is stabilized after the initial fluctuation. Now, this can be fixed by trimming (spoiler alert, that is the next step). Because it's early on and stabilizes, our DEG analysis should not be heavily impacted.
 
 ### Per sequence GC content 
 This measures the GC content across the whole length of each sequence in a file and compares it to a modeled normal distribution of GC content. Now, we don't know the GC content of the model, so the GC content is calculated from the observed dara and used to build a reference distribution. As per usual,an oddly shaped distribution could indicate contamination or biased subsets. A normal distribution is shifted and indicates some systemic bias which is independent of base position. If there is a systemic bias that creates a systemic bias, then it won't be flagged because the module does not know what your genome's GC content is. A warning is raised if the sum of the deviations from the normal distribution represents more than 15% of the reads. It fails if the sum of the normal distribution represents more than 15% of the reads.
 
 ![GC_content](https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/Photos/FastQC/per_seq_GC_cont.png)
+
 Our GC content, shows a normal distribution fitted to the model, so we are smoothing sail on this front.
 
 ### Per base N content
 This plots out the percentage of base calls at each position for which an N was called. It is not unusual to see a very low proportion of Ns in a sequence, especially near the end. BUT, if it rises above a few percent, it could suggest that the analysis was unable to interpret data well enough to make valid calls. This module raises a warning if any position shows an N content of >5%, and it fails if any position shows an N content >20%.
 
 ![N_cont](https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/Photos/FastQC/per_base_N_cont.png)
+
 It looks like we have little to no Ns!
 
 ### Sequence length distribution
 Now, a lot of high throughput sequencers will generate sequence fragments of uniform length, but others can have wildly varying lengths (not everyone can be tall and lengthy and that's okay). Anyways, even the uniform lengths can be trimmed to remove poor quality base calls. This module generates a graph that shows the distribution of fragment sizes in the file which was analysed. In a lot of cases, this graph will be very simple and have one peak, but there are, of course, exceptions. This will raise a warning if all sequencing are not the same length, and it will fail if any of the sequences have zero length.
 
 ![length_distrubtion](https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/Photos/FastQC/seq_length_distr.png)
+
 It look slike the reads are pretty uniformed! That means there is no need for an aggressive amount of length filtering. 
 
 ### Sequence Duplication Levels
 This counts the degree of duplication for every sequence in the set and creates a plot showing the relative number of sequences with different degrees of duplication. Now, it does not do this for every sequence but for about the first 200,000. That's enough for you to see the profile of the whole file. Any sequence with more than 10 duplicates will be placed at the end, so it is pretty normal to see a little rise at the end. A big rise would indicate that you have A LOT of sequences with high levels of duplication. This module raises a warning if non-unique sequences make up more than 20% of the total. It will issue an error if it makes up more than 50% (as it should).
 
 ![dups](https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/Photos/FastQC/seq_dup_levels.png)
+
 About 56% of the reads are duplicates. A moderate level of duplication is expected in RNA-seq, especially for highly expressed genes. Because of this, we are going to venture on and still see what we can find from this data!
 
 ### Overrepresented sequences
@@ -86,6 +94,7 @@ There were no over-represented sequences! Heck yea!
 This displays the proportion of sequences which have an adapter sequence at a given position. This is informative in deciding whether thee is a significant amount of adapter present in the sequences and can be subjected to trimming.A high percentage of adapter sequences present could indicate a problem with library preparation. It will issue a warning if a significant percentage of reads contain adapter sequences (>5%), and it may flag a failure if the percentage is very high (>10%).
 
 ![adapters](https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/Photos/FastQC/adapter_cont.png)
+
 There is little to no adapters present in the sequences, so we do not need any special things for adapter trimming. This means our trimming will focus on quality trimming. 
 
 
