@@ -1,0 +1,1 @@
+# Kallisto: Creating an Index & Aligning Reads
