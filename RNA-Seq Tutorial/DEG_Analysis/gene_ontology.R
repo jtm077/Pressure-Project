@@ -15,8 +15,8 @@ down<-transcripts_down %>%
 all<-genes_all %>%
   dplyr::select(gene_name)
 
-#copy to clipboard and paste into ShinyGO
+#copy to clipboard and paste on ShinyGO
 writeClipboard(as.character(up))
 
-#copy to clipboard and paste into ShinyGO
+#copy to clipboard and paste into 'background' on ShinyGO
 writeClipboard(as.character(all))

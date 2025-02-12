@@ -221,7 +221,9 @@ pheatmap(k_DEG_select, cexRow = 0.4, cexCol = 0.4, scale = "row")
 ![heat_map]()
 
 ### Gene Ontology
+It is great that we can see what genes are being differentially expressed when zebrafish are being exposed to high hydrostatic pressure, but what do these genes even do? To look further into what this stress could be affecting, we can look at the known functions of our enriched transcripts. 
 
+To do this, we will be using ShinyGO. All we need to do is get a list of our DEGs' gene symbols and the list of all of the genes in the transcriptome. We are going to extract this data form our ```genes_all``` dataframe. 
 ```
 #filter for transcripts enriched in the Press treatment
 transcripts_up <- dplyr::filter(genes_all, qval <= 0.05, b > 0)
@@ -245,3 +247,8 @@ writeClipboard(as.character(up))
 #copy to clipboard and paste into ShinyGO
 writeClipboard(as.character(all))
 ```
+There are a lot of analyses that can be viewed on ShinyGO. If you have time, explore some more. If you see something interesting, come talk to me or Dr. Mika about it! We love to yap (especially me)! Below is the gene ontology (GO) biological process enrichment for the dataset we just did! It looks like pressure seems to be affecting ribosomal proteins!
+
+But you reached it to the end! Of the tutorial...
+
+Click here for more >:)
