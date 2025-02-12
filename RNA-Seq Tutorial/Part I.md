@@ -1,7 +1,7 @@
 # Part I: Setting Up Windows Powershell
 
 ## Windows Subsystem for Linux 
-We will be handling all of the sequencing data locally on windows. However, due to much of bioinformatic analysis favoring Linux systems, (and the fact that this is how I learned it, therefore making it the fastest way for me to teach you and actually be able to help you) you will need to make some additions to your computer's arsenal before we get into the ooey gooey good stuff we call frickin' science.You can download the WSL [here](https://ubuntu.com/desktop/wsl).
+We will be handling all of the sequencing data locally on windows. However, due to much of bioinformatic analysis favoring Linux systems, (and the fact that this is how I learned it, therefore making it the fastest way for me to teach you and actually be able to help you) you will need to make some additions to your computer's arsenal before we get into the ooey gooey good stuff we call frickin' science. You can download the WSL [here](https://ubuntu.com/desktop/wsl).
 
 Once you have this downloaded, we will prepare the conda environment. 
 
@@ -17,9 +17,9 @@ Okay, back to the actual tutorial.
 ## Initializing your environment
 Alright, now go ahead and fire up Windows Powershell because we are about to get hella started (on the set up process LOL).
 
-Side Note: All of these comments are purely for my own enjoyment, so you can choose to enjoy them or not (I know I am).
+>Side Note: All of these comments are purely for my own enjoyment, so you can choose to enjoy them or not (I know I am).
 
-Anyways, you are going to want to run the following commands in your terminal (I suggest actually typing them our rather than copy and paste):
+Anyways, you are going to want to run the following commands in your terminal (I suggest actually typing them out rather than copy and paste):
 ```
 #Getting WSL for Windows installed:
 wsl --install

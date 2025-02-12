@@ -1,13 +1,13 @@
 # FastQC: Quality Check
 Good morning, class. Today, we will be learning and practicing the use of FastQC.
-> FastQC is a  tool that assesses the quality of raw sequencing data from high throghput sequencing. It checks for problems, provides an overview on basic quality control metrics, generates a report with graphical or list data, and flags issues.
+> FastQC is a  tool that assesses the quality of raw sequencing data from high throughput sequencing. It checks for problems, provides an overview on basic quality control metrics, generates a report with graphical or list data, and flags issues.
 
 Okay, if you're joining us only now. Please go to part I to ensure you have all the necessary packages to perform the rest of this tutorial part. If you have already gone through that part, you should have all the necessary parts! We can run our quality analysis on all of our .fast.gz files using the following script:
 * [fastqc.sh]()
 
 So this is another thing that may take a bit because it will be quality checking all four of the paired reads. Here is another [video](https://www.youtube.com/watch?v=zKKKJQ51aoE).
 
-In your output directory, you will see that a report was generated for each read.Let's go over one of the reports, and all of its sections, together. Let's use the report generated for brain4_9Mpa_1.fastq.gz(SRR15927811_1.fast.gz):
+In your output directory, you will see that a report was generated for each read. Let's go over one of the reports, and all of its sections, together. Let's use the report generated for brain4_9Mpa_1.fastq.gz(SRR15927811_1.fast.gz):
 
 > SUGGESTION: If you have all of your FastQC files, I suggest skipping ahead to the trimming in the next part, start running that code because it will take a while! THEN, come back and do your analysis on your FastQC outputs! If you are doing this in a multi-day stretch, then ignore this message!
 

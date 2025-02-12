@@ -1,32 +1,25 @@
 #!/bin/bash
+target_dir="/mnt/c/Users/morel/OneDrive/Desktop/Pressure/Tutorial/fastq_output"
+output_dir="/mnt/c/Users/morel/OneDrive/Desktop/Pressure/Tutorial/trimmed_fastq_output"
+threads=4
 
-# Define the target directory for input and output
-TARGET_DIR="/mnt/c/Users/morel/OneDrive/Desktop/Pressure/Tutorial/fastq_output"
-
-# Set number of threads
-THREADS=4
-
-# List of file pairs to trim
 declare -a PAIRS=(
     "SRR15927811_1.fastq.gz SRR15927811_2.fastq.gz"
     "SRR15927812_1.fastq.gz SRR15927812_2.fastq.gz"
     "SRR15927813_1.fastq.gz SRR15927813_2.fastq.gz"
     "SRR15927837_1.fastq.gz SRR15927837_2.fastq.gz"
 )
+mkdir -p "$output_dir"
+cd "$target_dir" || { echo "are you dumb? that directory does not exist!"; exit 1; }
 
-# Move into the target directory
-cd "$TARGET_DIR" || { echo "Error: Target directory not found!"; exit 1; }
-
-# Loop through each pair
 for pair in "${PAIRS[@]}"; do
     set -- $pair
-    READ1=$1
-    READ2=$2
+    read1=$1
+    read2=$2
 
-    echo "Trimming $READ1 and $READ2 with $THREADS threads..."
+    echo "trimming $read1 and $read2 with $threads threads..."
     
-    # Run trim_galore in paired-end mode with multi-threading
-    trim_galore --paired --gzip --fastqc --cores "$THREADS" "$READ1" "$READ2" --output_dir "$TARGET_DIR"
+    trim_galore --paired --gzip --cores "$THREADS" "$READ1" "$READ2" --output_dir "$TARGET_DIR"
 done
 
 echo "We fucking did it."

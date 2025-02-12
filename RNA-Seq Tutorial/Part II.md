@@ -20,14 +20,14 @@ First, we will get the following accession numbers:
 | SRX12217955   | T3_9MPa       |
 | SRX12217954   | T2_9MPa       |
 
-These accession numbers include three different samples of brain tissue from zebrafish put under 9Mpa (90 atm). You may have noticed that we are downloading one that experienced 0.1MPa (10 atm). This experience is much closer to around the actual pressure exerted for shallowater fish (such as zebrafish). Because of that, we can use that as our control for when we run our differential expressed gene (DEG) analysis later on this tutorial! Yay science!
+These accession numbers include three different samples of brain tissue from zebrafish put under 9MPa (90 atm). You may have noticed that we are downloading one that experienced 0.1MPa (10 atm). This experience is much closer to around the actual pressure exerted for shallow-water fish (such as zebrafish). Because of that, we can use that as our control for when we run our differential expressed gene (DEG) analysis later on this tutorial! Yay science!
 
 Now, in order to get these numbers from NCBI, we are going to use the following script:
 ```
 put something here
 ```
 
-Yay, data has been retrieved! But slow down tiger, we got more preparation before we can mess with it. These are srr files, but we need them in fastq files to play around with them.Unfortunately for us, srr files are the compressed version of our files. Our next step is to extract the raw sequencing data from these files using "fasterq-dump". We can do this using the following script below.
+Yay, data has been retrieved! But slow down tiger, we got more preparation before we can mess with it. These are srr files, but we need them in fastq files to play around with them. Unfortunately for us, srr files are the compressed version of our files. Our next step is to extract the raw sequencing data from these files using "fasterq-dump". We can do this using the following script.
 * [fasterq.sh]()
 
 This script is doing all of the extraction, AND it is zipping our files so they don't take up so much space. It will take a bit, so go for a walk, do some other work, or watch something. May I suggest: [this](https://www.youtube.com/watch?v=9FqwhW0B3tY).
