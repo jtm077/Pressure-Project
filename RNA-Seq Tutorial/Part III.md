@@ -94,4 +94,4 @@ Now, we only went over one together, but I encourage you to browse through the r
 
 That's optional though, and I am not there to force you to do it. So, you can move on if you would like.
 
-Now that we have decided these sequences are _good enough_ for us, we can mosey on down to Part IV!
+Now that we have decided these sequences are _good enough_ for us, we can mosey on down to [Part IV](https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/Part%20IV.md)!
