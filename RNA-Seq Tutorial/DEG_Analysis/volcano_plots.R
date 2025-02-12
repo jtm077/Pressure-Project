@@ -23,9 +23,7 @@ biomart_map <- read_delim("ensemble.txt", delim = "\t", col_names = TRUE)
 colnames(biomart_map) <- c("gene_name", "gene_id", "target_id")
 
 # Use this mapping in sleuth_prep
-so <- sleuth_prep(metadata, full_model = ~treat, target_mapping = biomart_map, 
-                  extra_bootstrap_summary = TRUE, read_bootstrap_tpm = TRUE, 
-                  aggregation_column = "gene_name")
+so <- sleuth_prep(metadata, full_model = ~treat, target_mapping = biomart_map, extra_bootstrap_summary = TRUE, read_bootstrap_tpm = TRUE, aggregation_column = "gene_name")
 
 # Fit the model
 so <- sleuth_fit(so)
