@@ -28,7 +28,7 @@ put something here
 ```
 
 Yay, data has been retrieved! But slow down tiger, we got more preparation before we can mess with it. These are srr files, but we need them in fastq files to play around with them. Unfortunately for us, srr files are the compressed version of our files. Our next step is to extract the raw sequencing data from these files using "fasterq-dump". We can do this using the following script.
-* [fasterq.sh]()
+* [fasterq.sh](https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/scripts/fasterq.sh)
 
 This script is doing all of the extraction, AND it is zipping our files so they don't take up so much space. It will take a bit, so go for a walk, do some other work, or watch something. May I suggest: [this](https://www.youtube.com/watch?v=9FqwhW0B3tY).
 

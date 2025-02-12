@@ -70,7 +70,7 @@ So, all of the scripts I provided are set up with my file directory, so it won't
 Anyways, I use notepad++ to write and edit scripts. You can download this [here](https://notepad-plus-plus.org/downloads/).
 
 After you have that downloaded, let's run a script together. I want you to download the following script and save it to whatever directory you plan doing this tutorial in:
-* [test.sh]()
+* [test.sh](https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/scripts/test.sh)
 
 After you have this downloaded, I want you to open it with notepad++. Now, unfortunately for you, you will have to interact with every script I give you. The reason for that is the scripts get downloaded in windows format (because you're downloading it to a Windows device (if you have a mac, I am sorry you are not in the clear)). Anyways, open this script and look over the code if you want. It is a very simple script that will print out a message. Feel free to change the message, but I think it is pretty good as is. 
 
@@ -86,6 +86,8 @@ Anyways, how do we run a script in wsl? It's quite simple. You will simply type 
 the ```./``` in the command simply represents every directory before your current directory, or the path to get to your current directory. We love shortcuts that allows us to not type our directory path out every single time we want to do somehting in it. Anyways, you did it! You printed ```strawberry milk```!
 
 You are porbably wondering why we couldn't just type those small and short commands in the terminal itself. Well, we could have, but as the tutorial goes on, and you further your interest in bioinformatics, scripts will get longer and more complicated. Or, we may want to use them multiple times. To help us out and keep track of everything we write, we use ```.sh``` files to run jobs.
+
+> This is just another helpful tip. If you ever want to go back a single directory use the command ```cd ..```. Also, you can lok at past commands you run using the up and down arrows on your keyboard, so if you have to rerun a command, you don't have to type it again. You're welcome.
 
 Now you know how to open, edit, and prepare scripts for jobs. We just have one more step until we start the science!
 

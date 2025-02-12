@@ -6,8 +6,8 @@ We will be comparing transcript expression levels between our treatment groups (
 ## File preparation
 Before we can fully analyze our data, we have to prepare two different files. 
 
-The first file we need will contain the transcript ID and gene symbols. This will be important later when we make visualizations of the data. Without it, we won't have data labels, and we won't be able to tell which genes are which just looking at them. In order to get these, we will need to take another trip to ensembl. To save you some time in figuring out that dumbass [website](), the file is bewlow. Save this to your ```DEG_Analysis``` folder:
-* [ensemble.txt]()
+The first file we need will contain the transcript ID and gene symbols. This will be important later when we make visualizations of the data. Without it, we won't have data labels, and we won't be able to tell which genes are which just looking at them. In order to get these, we will need to take another trip to ensembl. To save you some time in figuring out that dumbass website, the file is below. Save this to your ```DEG_Analysis``` folder:
+* [ensemble.txt]https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/DEG_Analysis/ensemble.txt)
 
 
 Now, in a text editor, we will need to create a tab-separated list of treatment conditions for our samples:
@@ -177,7 +177,7 @@ EnhancedVolcano(forVolcano,
                 legendPosition = "none")
 
 ```
-![volcano_plot]()
+![volcano_plot](https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/Photos/Maps/volcano_plot_brain234_9.0MPa.png)
 
 ### Heat Maps
 We can also visualize differential gene expression with a heat map. In order to plot the map, we need to get the counts for each transcript and sample. All of this has been stored in the sleuth object ```so```. We will export it using ```kallisto_table``` command.
@@ -218,7 +218,7 @@ k_DEG_select[is.na(k_DEG_select)] <- 0  # Replace remaining NA with 0
 # Plot heatmap
 pheatmap(k_DEG_select, cexRow = 0.4, cexCol = 0.4, scale = "row")
 ```
-![heat_map]()
+![heat_map](https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/Photos/Maps/pheatmap.png)
 
 ### Gene Ontology
 It is great that we can see what genes are being differentially expressed when zebrafish are being exposed to high hydrostatic pressure, but what do these genes even do? To look further into what this stress could be affecting, we can look at the known functions of our enriched transcripts. 
@@ -249,6 +249,6 @@ writeClipboard(as.character(all))
 ```
 There are a lot of analyses that can be viewed on ShinyGO. If you have time, explore some more. If you see something interesting, come talk to me or Dr. Mika about it! We love to yap (especially me)! Below is the gene ontology (GO) biological process enrichment for the dataset we just did! It looks like pressure seems to be affecting ribosomal proteins!
 
-But you reached it to the end! Of the tutorial...
+![GO](https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/Photos/Maps/gene_ontology.png)
 
-Click here for more >:)
+But you reached it to the end! Of the tutorial...

@@ -35,8 +35,8 @@ kallisto quant \
 * ```-b``` sets the number of bootstrap repetitions that are used to calculate measurement variance used in the downstream analyses.
 
 So, we will have to repeat this entire analysis on each sample. At the bottom of the ```quant``` command, you will notice a block of code: ```${samples[$sample]}```. That will insert our samples, and one by ne, run the ```quant``` analyses. We will achieve this feat using the following script:
-* [kallisto_quant.sh]()
+* [kallisto_quant.sh](https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/scripts/kallisto_quant.sh)
 
 Now, the output includes read counts and measurement variances, which will all be stored in the output folder. You will want to move this folder into the folder you will conduct your R analyses in. For simplicity's sake, I suggest just creating a folder called ```DEG_Analysis```.
 
-Now that we have that all set, we can move on to our analyses in RStudio! On to Part VI!
+Now that we have that all set, we can move on to our analyses in RStudio! On to [Part VI](https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/Part%20VI.md)!
