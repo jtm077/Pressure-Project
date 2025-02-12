@@ -88,7 +88,6 @@ This displays the proportion of sequences which have an adapter sequence at a gi
 ![adapters](https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/Photos/FastQC/adapter_cont.png)
 There is little to no adapters present in the sequences, so we do not need any special things for adapter trimming. This means our trimming will focus on quality trimming. 
 
-
 ## Other FastQC Oututs
 Now, we only went over one together, but I encourage you to browse through the rest and practice making inferences from the data.
 

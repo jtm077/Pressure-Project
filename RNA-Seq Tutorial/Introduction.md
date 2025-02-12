@@ -1,6 +1,6 @@
-#Introduction to RNA Sequence Analysis
+# Introduction to RNA Sequence Analysis
 
-##About the Process
+## About the Process
 In this introductory lesson plan, we will be doing an analysis of data found in "Gene expression responses in zebrafish to short-term high-hydrostatic pressure".
 
 The paper can be found [here](https://pmc.ncbi.nlm.nih.gov/articles/PMC8920842/).
