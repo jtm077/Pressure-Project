@@ -1,0 +1,1 @@
+grep  '^>' Danio_rerio.GRCz11.cdna.all.fa.gz | sed -E 's/>([^ ]+) .* \(([^)]+)\).*/\1 \2/' > Press_headers.txt
