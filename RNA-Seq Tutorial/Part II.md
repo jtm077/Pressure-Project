@@ -24,7 +24,7 @@ These accession numbers include three different samples of brain tissue from zeb
 
 Now, in order to get these numbers from NCBI, we are going to use the following script:
 ```
-put something here
+prefetch (accession number)
 ```
 
 Yay, data has been retrieved! But slow down tiger, we got more preparation before we can mess with it. These are srr files, but we need them in fastq files to play around with them. Unfortunately for us, srr files are the compressed version of our files. Our next step is to extract the raw sequencing data from these files using "fasterq-dump". We can do this using the following script.
