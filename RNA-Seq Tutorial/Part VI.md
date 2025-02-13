@@ -7,7 +7,7 @@ We will be comparing transcript expression levels between our treatment groups (
 Before we can fully analyze our data, we have to prepare two different files. 
 
 The first file we need will contain the transcript ID and gene symbols. This will be important later when we make visualizations of the data. Without it, we won't have data labels, and we won't be able to tell which genes are which just looking at them. In order to get these, we will need to take another trip to ensembl. To save you some time in figuring out that dumbass website, the file is below. Save this to your ```DEG_Analysis``` folder:
-* [ensemble.txt]https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/DEG_Analysis/ensemble.txt)
+* [ensemble.txt](https://github.com/jtm077/Pressure-Project/blob/main/RNA-Seq%20Tutorial/DEG_Analysis/ensemble.txt)
 
 
 Now, in a text editor, we will need to create a tab-separated list of treatment conditions for our samples:
