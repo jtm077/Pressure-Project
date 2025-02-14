@@ -1,1 +1,2 @@
 # Pressure-Project
+Hello, friends! If you are here it's because you too are interested in pressure, and I LOVE that! This is a space where I upload little things for the Mika Lab. Take a look around, and if you are a member of the pressure team, I welcome you! If you are here looking for the RNA-Seq Tutorial, that would be in the RNA-Seq tutorial folder, go to the Introduction, and you will be where you need to start!
